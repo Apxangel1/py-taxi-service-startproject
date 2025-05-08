@@ -15,11 +15,6 @@ class Car(models.Model):
 
 class Driver(AbstractUser):
     license_number = models.CharField(max_length=100, unique=True)
-    username = models.CharField(max_length=100, unique=True)
-    email = models.EmailField()
-    password = models.CharField(max_length=100)
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
 
     def __str__(self):
         return f"{self.username}: {self.first_name} {self.last_name}"
